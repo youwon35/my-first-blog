@@ -6,17 +6,13 @@
     <div>
         <h1><a href="">Yuwon's Blog</a></h1>
     </div>
+      {% for post in posts %}
     <div>
-      <p>published : 14.6.2014 </p>
-      <h2><a href = "">My first Post</a></h2>
-      <p>Hello. I m Yuwon Hwang</p>
+      <p>published : {{post.published_date}}</p>
+      <h1><a hef = "">{{post.title}}</a></h1>
+      <p>{{post.text|linebreaksbr}}</p>
     </div>
-    <div>
-      <p>published : 12.4.2018</p>
-      <h2><a href = "">My Second Post</a></h2>
-      <p>Hello. I m married with Yu Jin</p>
-
-    </div>
+  {% endfor %}
 
   </body>
 
